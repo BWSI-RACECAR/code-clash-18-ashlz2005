@@ -44,7 +44,7 @@ class Solution:
         # TODO: Write code below to return a bool with the solution to the prompt
         for i in cost:
             if i.isalpha() is False:
-                if i in pool or 'C' in pool:
+                if i in pool:
                     pool.replace(i, '')
                     cost.replace(i, '')
                 else:
