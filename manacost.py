@@ -42,18 +42,18 @@ class Solution:
         # return: bool
     
         # TODO: Write code below to return a bool with the solution to the prompt
+        num = 0
+        
         for i in cost:
-            if i.isalpha():
-                if i in pool:
-                    pool.replace(i, '', 1)
-                    cost.replace(i, '', 1)
-                else:
-                    return False
+            if i.isdigit():
+                num = i
+            elif i not in pool:
+                return False
 
-        if len(cost) > len(pool):
-            return False
-        else:
+        if (len(cost) + int(num) - 1) == len(pool):
             return True
+        
+        return False
 
 def main():
     string1 = input().strip()
