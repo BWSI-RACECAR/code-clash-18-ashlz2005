@@ -45,8 +45,8 @@ class Solution:
         for i in cost:
             if i.isalpha():
                 if i in pool:
-                    pool.replace(i, '')
-                    cost.replace(i, '')
+                    pool.replace(i, '', 1)
+                    cost.replace(i, '', 1)
                 else:
                     return False
 
